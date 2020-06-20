@@ -13,5 +13,5 @@
 
 ***************/
 $(document).ready( () => {
-	alert("We are ready");
+	
 });

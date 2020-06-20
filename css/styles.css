@@ -9,18 +9,51 @@
 	border-radius: 0% !important;
 	font-family: 'Roboto', sans-serif;
 }
+
+h4{
+	text-transform: uppercase;
+}
 /**************************
 
 	DELANI TOP CONTENT STYLES
 	
 ********************************/
-.delani_top_content{
+.delani-top-content{
 	color:#fff;
 	background-image: url('../assets/backgrounds/h_img.jpg');
 	background-repeat: no-repeat;
   background-size: cover;
 }
 
+.delani-welcome{
+	font-size: 27px;
+}
+
+.delani-brand-statement{
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+.top-content-wrapper{
+	text-align: center;
+}
+
+.top-content{
+	margin:5% 0% 5% 0%;
+}
+
+.top-content-head{
+	margin:10% 0% 3% 0%;
+}
+
+.top-content span::before {
+  content: "\A\A";
+  white-space: pre;
+}
+
+.top-content-footer{
+	margin:7% 0% 0% 0%;
+}
 /**************************
 
 	DELANI MAIN CONTENT STYLES
