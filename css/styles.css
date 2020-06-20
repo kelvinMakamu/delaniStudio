@@ -78,9 +78,14 @@ h1,h2,h3,h4{
 	background-image: url('../assets/backgrounds/s_image.jpg');
 }
 
-.delani-what-we-do-heading{
-	margin-bottom: 3%;
+.delani-portfolio-content{
+	padding:0% 20% 15% 20%;
 }
+
+.delani-portfolio-content img{
+	width: 150px;
+	height: 150px;
+} 
 /**************************
 
 	DELANI BOTTOM CONTENT STYLES
