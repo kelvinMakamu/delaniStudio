@@ -10,7 +10,7 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-h4{
+h1,h2,h3,h4{
 	text-transform: uppercase;
 }
 /**************************
@@ -55,9 +55,15 @@ h4{
 	DELANI MAIN CONTENT STYLES
 	
 ********************************/
+.about-us-content{
+	padding: 2.5% 0% 0% 5%;
+	line-height: 4vh;
+}
 
-
-
+.about-us-content p{
+	font-size: 12px;
+	margin-bottom: 0px;
+}
 
 /**************************
 
