@@ -55,16 +55,28 @@ h1,h2,h3,h4{
 	DELANI MAIN CONTENT STYLES
 	
 ********************************/
-.about-us-content{
+.delani-about-us-content{
 	padding: 2.5% 0% 0% 5%;
 	line-height: 4vh;
 }
 
-.about-us-content p{
+.delani-services-content-services{
+	padding: 0% 0% 0% 5%;
+	line-height: 4vh;
+}
+
+.delani-about-us-content p, .delani-services-content-services p{
 	font-size: 12px;
 	margin-bottom: 0px;
 }
 
+.delani-services-content{
+	color:#fff;
+	margin-top: 4%;
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../assets/backgrounds/s_image.jpg');
+}
 /**************************
 
 	DELANI BOTTOM CONTENT STYLES
