@@ -5,7 +5,7 @@
 **************************/
 *{
 	margin:0;
-	letter-spacing: 2px;
+	letter-spacing: 2px !important;
 	border-radius: 0% !important;
 	font-family: 'Roboto', sans-serif;
 }
@@ -43,7 +43,7 @@ textarea:focus,input:focus,label:focus{
   color: #fff;
 }
 
-.jumbotron{
+.jumbotron,.work1, .work2, .work3, .work4, .work5, .work6, .work7, .work8{
 	color:#fff;
   background-size: cover;
   background-position: center; 
@@ -68,7 +68,6 @@ textarea:focus,input:focus,label:focus{
 }
 
 .delani-brand{
-	letter-spacing: 1px;
 	font-size: 12px;
 	text-transform: uppercase;
 }
@@ -113,24 +112,23 @@ textarea:focus,input:focus,label:focus{
 .delani-services-content{
 	background-image: url('../assets/backgrounds/s_image.jpg');
 }
-
-.delani-portfolio-content{
-	padding:0% 10% 5% 12.5%;
-}
-
 /****************
 
 	PORTFOLIO IMAGES
 
 *********************/
+.delani-portfolio-content{
+	padding-left: 5.5%;
+}
+
+.delani-portfolio-content .row{
+	margin-top:-2.5% !important;
+	margin-bottom: 0% !important;
+}
+
 .work1, .work2, .work3, .work4, .work5, .work6, .work7, .work8{
-	color:#fff;
 	width: 200px;
 	height: 200px;
-	margin:1.5% 1.5% 0% 1.5%;
-  background-size: cover;
-  background-position: center; 
-	background-repeat: no-repeat;
 }
 
 .work1{
@@ -172,3 +170,8 @@ textarea:focus,input:focus,label:focus{
 .delani-contact-us{
 	background-image: url('../assets/backgrounds/c_image.jpg');
 }
+
+.delani-contact-us form, .delani-portfolio-content .row{
+	padding:0% 10% 5% 10%;
+}
+
