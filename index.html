@@ -8,8 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
 	<!-- BEGIN DELANI TOP CONTENT -->
@@ -113,23 +111,36 @@
 					<h4 class="text-center">contact us</h4>
 				</div>
 			</div>
-			<form>
+			<form id="delani_contact_form">
 				<div class="row">
 						<div class="col-md-6 col-lg-6 col-sm-12">
 							<div class="form-group">
-								<input type="text" name="" class="form-control" placeholder="Name...">
+								<input type="text" name="contact_name" class="form-control" placeholder="Name..."
+								 id="contact_name">
+								 <small class="error" id="contact_name_error">Name is required. Please provide a
+								  valid name</small>
 							</div>
 						</div>
 
 						<div class="col-md-6 col-lg-6 col-sm-12">
 							<div class="form-group">
-								<input type="email" name="" class="form-control" placeholder="Email...">
+								<input type="email" name="contact_email" class="form-control" placeholder="Email..."
+								 id="contact_email">
+								 <small class="error" id="contact_email_error">Email Address is required. Please provide your valid email address</small>
 							</div>
 						</div>
 
 						<div class="col-md-12 col-lg-12 col-sm-12">
 							<div class="form-group">
-								<textarea class="form-control" placeholder="Your message here..." rows="10"></textarea>
+								<textarea class="form-control" placeholder="Your message here..." rows="10"
+								 name="contact_message" id="contact_message"></textarea>
+								 <small class="error" id="contact_message_error">Kindly provide your message..</small>
+							</div>
+						</div>
+
+						<div class="col-md-12 col-lg-12 col-sm-12">
+							<div class="form-group">
+								<button name="contact_form_submit" class="btn btn-primary">Send Message</button>
 							</div>
 						</div>
 				</div>
@@ -161,6 +172,8 @@
 		</div>
 	</div>
 	<!-- END DELANI BOTTOM CONTENT -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 	<script type="text/javascript">displayIconsDescriptions();</script>
 </body>
 </html>

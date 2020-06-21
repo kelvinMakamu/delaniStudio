@@ -28,6 +28,14 @@ textarea:focus,input:focus,label:focus{
   -webkit-appearance:none;
   box-shadow: none !important;
 }
+
+.error{
+	letter-spacing: 5px;
+	display:none;
+	font-weight: bold;
+	color:#DB4437;
+	margin-top: 3%;
+}
 /**************
 	
 	PLACEHOLDERS
