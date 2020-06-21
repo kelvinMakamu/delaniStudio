@@ -4,6 +4,7 @@
 
 ***************/
 const iconsDescriptionWrapper="delani-what-we-do";
+const portfolios= ['work1','work2','work3','work4','work5','work6','work7','work8'];
 
 const iconDescriptions =[
 	{'name':'design','icon':'design_icon.png',
@@ -47,14 +48,24 @@ let toggleIconDescription = (task) =>{
 	 	$("#"+task).slideToggle();
 	});
 }
-
 /***********
 	
 	UI/UX 
 
 ***************/
 $(document).ready( () => {
+
 	iconDescriptions.forEach((description) => {
 		toggleIconDescription(description.name);
 	});
+
+	portfolios.forEach((portfolio) =>{
+		$("."+portfolio).hover(() => {
+			 $( "."+portfolio+"-project").show();
+    },() => {
+	    	$( "."+portfolio+"-project").hide();
+    });
+
+	});
+
 });
