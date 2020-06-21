@@ -7,11 +7,11 @@ const iconsDescriptionWrapper="delani-what-we-do";
 
 const iconDescriptions =[
 	{'name':'design','icon':'design_icon.png',
-	'desc':'Our design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing. Throughout your project, our designers create and implement visual design and workflows, solicit user feedback and work with you to make sure what gets built is what is needed.'},
+	'desc':'<p>Our design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing.</p><p> Throughout your project, our designers create and implement visual design and workflows, solicit user feedback and work with you to make sure what gets built is what is needed.</p>'},
 	{'name':'development','icon':'dev_icon.png',
-	'desc':'All engineers are fluent in the latest enterprise, mobile and web development technologies. They collaborate with your team to write, and improve code on a daily basis, using proven practices such as test-driven development and pair programming.'},
+	'desc':'<p>All engineers are fluent in the latest enterprise, mobile and web development technologies.</p><p> They collaborate with your team to write, and improve code on a daily basis, using proven practices such as test-driven development and pair programming.</p>'},
 	{'name':'product-management','icon':'product_icon.png',
-	'desc':'Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. This iterative process allows for changes as business requirements evolve.'}
+	'desc':'<p>Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live.</p><p> This iterative process allows for changes as business requirements evolve.</p>'}
 ];
 
 var capitalizeEachWord = (sentence) => {
