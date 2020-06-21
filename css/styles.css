@@ -175,3 +175,15 @@ textarea:focus,input:focus,label:focus{
 	padding:0% 10% 5% 10%;
 }
 
+.delani-social-contacts{
+	margin-top: 3.5%;
+}
+
+.delani-social-icons-holder{
+	margin-right:2%;
+}
+
+.delani-footer-studio{
+	text-transform: uppercase;
+	font-size: 14px;
+}
