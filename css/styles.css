@@ -161,7 +161,27 @@ textarea:focus,input:focus,label:focus{
 }
 
 .work8{
-	background-image: url('../assets/portfolio/work8.jpg');
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),url('../assets/portfolio/work8.jpg');
+	 z-index: 1;
+}
+
+.work8-overlay{
+	z-index: 3;
+  top: -190px;
+  width: 163px;
+  height: 163px;
+	color:#fff;
+	padding: 7% 2% 2% 7%;
+	margin:3% 0% 2% 9%;
+	position: relative;
+	border:3px solid #fff;
+}
+
+.work8-overlay h4{
+	font-weight: bold;
 }
 /**************************
 
@@ -169,6 +189,7 @@ textarea:focus,input:focus,label:focus{
 	
 ********************************/
 .delani-contact-us{
+	margin-top: -12.5%;
 	background-image: url('../assets/backgrounds/c_image.jpg');
 }
 
@@ -197,7 +218,12 @@ textarea:focus,input:focus,label:focus{
 	.portfolio-image-responsive{
 		padding-left:25% !important;
 	}
+
 	.responsive-image{
 		margin-bottom: 3% !important;
+	}
+
+	.delani-contact-us{
+		margin-top: -27%;
 	}
 }
