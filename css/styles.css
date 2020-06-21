@@ -113,6 +113,33 @@ textarea:focus,input:focus,label:focus{
 .delani-services-content{
 	background-image: url('../assets/backgrounds/s_image.jpg');
 }
+
+.design, .development, .project-management{
+	cursor: pointer;
+}
+
+#design, #development, #project-management,.icons-description{
+	color:#000;
+	cursor: pointer;
+	display: none;
+}
+
+.icons-description{
+	margin-bottom: 2%;
+	padding:5% 5% 5% 5%;
+	border:2px solid #dedede;
+	box-shadow: 0px 2px 3px  #dedede;
+}
+
+.icons-description h6{
+	color:#000;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.icons-description hr{
+	border-bottom:2px solid #000;
+}
 /****************
 
 	PORTFOLIO IMAGES
