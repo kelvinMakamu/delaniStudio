@@ -13,6 +13,10 @@
 h1,h2,h3,h4{
 	text-transform: uppercase;
 }
+
+.row{
+	margin-bottom: 2%;
+}
 /**************************
 
 	DELANI TOP CONTENT STYLES
@@ -20,26 +24,24 @@ h1,h2,h3,h4{
 ********************************/
 .delani-top-content{
 	color:#fff;
-	background-image: url('../assets/backgrounds/h_img.jpg');
-	background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; 
+	background-repeat: no-repeat;
+	background-image: url('../assets/backgrounds/h_img.jpg');
 }
 
-.delani-welcome{
-	font-size: 27px;
-}
-
-.delani-brand-statement{
+.delani-brand{
 	letter-spacing: 1px;
 	font-size: 12px;
+	text-transform: uppercase;
 }
 
 .top-content{
-	margin:5% 0% 5% 0%;
+	margin:10% 0% 5% 0%;
 }
 
 .top-content-head{
-	margin:10% 0% 3% 0%;
+	margin:35% 0% 0% 3%;
 }
 
 .top-content span::before {
@@ -47,8 +49,18 @@ h1,h2,h3,h4{
   white-space: pre;
 }
 
+.top-content span::after {
+  content: "\A";
+  white-space: pre;
+}
+
 .top-content-footer{
-	margin:7% 0% 0% 0%;
+	padding-top: 20%;
+	margin:12% 0% 0% 0%;
+}
+
+.top-content-footer img{
+
 }
 /**************************
 
@@ -72,20 +84,61 @@ h1,h2,h3,h4{
 
 .delani-services-content{
 	color:#fff;
-	margin-top: 4%;
   background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url('../assets/backgrounds/s_image.jpg');
 }
 
 .delani-portfolio-content{
-	padding:0% 20% 15% 20%;
+	padding:0% 10% 10% 12.5%;
 }
 
-.delani-portfolio-content img{
-	width: 150px;
-	height: 150px;
-} 
+/****************
+
+	PORTFOLIO IMAGES
+
+*********************/
+.work1, .work2, .work3, .work4, .work5, .work6, .work7, .work8{
+	color:#fff;
+	width: 200px;
+	height: 200px;
+	margin:1.5% 1.5% 1.5% 1.5%;
+  background-size: cover;
+  background-position: center; 
+	background-repeat: no-repeat;
+}
+
+.work1{
+	background-image: url('../assets/portfolio/work1.jpg');
+}
+
+.work2{
+	background-image: url('../assets/portfolio/work2.jpg');
+}
+
+.work3{
+	background-image: url('../assets/portfolio/work3.jpg');
+}
+
+.work4{
+	background-image: url('../assets/portfolio/work4.jpg');
+}
+
+.work5{
+	background-image: url('../assets/portfolio/work5.jpg');
+}
+
+.work6{
+	background-image: url('../assets/portfolio/work6.jpg');
+}
+
+.work7{
+	background-image: url('../assets/portfolio/work7.jpg');
+}
+
+.work8{
+	background-image: url('../assets/portfolio/work8.jpg');
+}
 /**************************
 
 	DELANI BOTTOM CONTENT STYLES
