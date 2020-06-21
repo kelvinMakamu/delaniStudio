@@ -18,8 +18,29 @@ p{
 	font-size: 12px;
 }
 
-.row{
-	margin-bottom: 2%;
+textarea{
+	resize: none;
+}
+
+textarea:hover,input:hover, textarea:active, input:active,
+textarea:focus,input:focus,label:focus{
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+/**************
+	
+	PLACEHOLDERS
+
+*****************/
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.form-control::placeholder { 
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+/* Internet Explorer 10-11 */
+.form-control:-ms-input-placeholder { 
+  color: #fff;
 }
 
 .jumbotron{
@@ -27,6 +48,15 @@ p{
   background-size: cover;
   background-position: center; 
 	background-repeat: no-repeat;
+}
+
+.row{
+	margin-bottom: 2%;
+}
+
+.form-control,.form-control:focus,.form-control:active{
+	border:1px solid #fff;
+	background-color: transparent;
 }
 /**************************
 
@@ -139,3 +169,6 @@ p{
 	DELANI BOTTOM CONTENT STYLES
 	
 ********************************/
+.delani-contact-us{
+	background-image: url('../assets/backgrounds/c_image.jpg');
+}
