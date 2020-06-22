@@ -4,6 +4,8 @@
 
 ***************/
 const iconsDescriptionWrapper="delani-what-we-do";
+const notificationPanel = "delani-contact-notification";
+
 const portfolios= ['work1','work2','work3','work4','work5','work6','work7','work8'];
 const alphaNumericPattern = /[^a-z\d]/i;
 const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -24,9 +26,9 @@ let validateContactForm = (c_name,c_email,c_message) =>{
 			isFormValid=1002;//Empty name provided
 		}else{
 			if(!validateInput(alphaNumericPattern,c_message)){
-				isFormValid=1003;//INvalid Message
+				isFormValid=1003;//Invalid Message
 			}else{
-				isFormValid = 1000;
+				isFormValid = 1000;//SUCCESS
 			}
 		}
 	}else{
@@ -59,6 +61,22 @@ let clearContactFormErrors = (inputType) =>{
 		document.getElementById("contact_message_error").innerHTML="";
 	 	break;
 	 }
+}
+
+let displayNotification = (notificationPanel,alert,message) => {
+	let notification ="<div class='alert "+alert+"' role='alert'>"+message+"</div>";
+	document.getElementById(notificationPanel).innerHTML+=notification;
+}
+
+let clearNotificationPanel = () => {
+	document.getElementById(notificationPanel).innerHTML="";
+}
+
+let clearContactMessageForm = () => {
+	clearContactFormErrors("all");
+	document.getElementById('contact_email').value = "";
+	document.getElementById('contact_name').value = "";
+	document.getElementById('contact_message').value = "";
 }
 
 let capitalizeEachWord = (sentence) => {
@@ -119,26 +137,36 @@ $(document).ready( () => {
      var c_email=$('#contact_email').val();
      var c_message=$('#contact_message').val();
      clearContactFormErrors("all");
+     clearNotificationPanel();
      switch(validateContactForm(c_name,c_email,c_message)){
      		case 1000:
-     		alert("Yeah");
+     		alert='alert-success';
+				message="<p>"+capitalizeEachWord(c_name)+" we have received your message. Thank you for reaching out to us.</p>";
+				clearContactMessageForm();
      		break;
 
      		case 1001:
+     		alert='alert-danger';
      		$('#contact_email_error').show();
+     		message='<p>Kindly provide your valid email address</p>';
 				document.getElementById("contact_email_error").innerHTML="Kindly provide a valid email address.";
      		break;
 
      		case 1002:
+     		alert='alert-danger';
      		$('#contact_name_error').show();
+     		message='<p>Kindly provide your name</p>';
 				document.getElementById("contact_name_error").innerHTML="Kindly provide your name";
      		break;
 
      		case 1003:
+     		alert='alert-danger';
      		$('#contact_message_error').show();
+     		message='<p>Kindly provide the contact message</p>';
 				document.getElementById("contact_message_error").innerHTML="Kindly provide contact message.";
      		break;
      }
+		 displayNotification(notificationPanel,alert,message);
   });
 
 });

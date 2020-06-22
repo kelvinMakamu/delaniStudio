@@ -67,6 +67,20 @@ textarea:focus,input:focus,label:focus{
 	border:1px solid #fff;
 	background-color: transparent;
 }
+
+.alert{
+	margin:0.75% 0% 0.75% 0%;
+	padding:3.5% 3% 3% 3%;
+}
+
+.alert p{
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+#delani-contact-notification{
+	margin-left: 25%;
+}
 /**************************
 
 	DELANI TOP CONTENT STYLES
