@@ -31,8 +31,8 @@ It checks if email is not valid       | !kmakmgmail.com | Kindly provide a valid
 * GIT
 * CSS3
 * HTML5
-* Bootstrap
 * jQuery
+* Bootstrap
 ## Live Website<br>
 * [Delani Studio](https://kelvinMakamu.github.io/delaniStudio/)
 ## Contact Information<br>
