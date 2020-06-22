@@ -2,7 +2,7 @@
 ## Brief Description<br>
 The application provides look and feel of a fictional studio site. The page outlines all the information about the studio<br><br>
 It provides details about the services provided by the fictional studio. There is a showcase of the projects already worked on by the studio.<br><br>
-The landing page has the following functioanlities:<br><br>
+The landing page has the following functioanlities:<br>
 * Site Responsiveness
 * Client-side Events
 * Form Validation
@@ -27,12 +27,12 @@ It checks if email input is empty     | BLANK           | Kindly provide your va
 It checks if message input is empty   | BLANK           | Kindly provide contact message.
 It checks if email is not valid       | !kmakmgmail.com | Kindly provide a valid email address.
 ## Technologies Used<br>
-* HTML5
-* CSS3
-* Bootstrap
 * JS
-* JQUERY
 * GIT
+* CSS3
+* HTML5
+* Bootstrap
+* jQuery
 ## Live Website<br>
 * [Delani Studio](https://kelvinMakamu.github.io/delaniStudio/)
 ## Contact Information<br>
