@@ -74,8 +74,8 @@ let clearNotificationPanel = () => {
 
 let clearContactMessageForm = () => {
 	clearContactFormErrors("all");
-	document.getElementById('contact_email').value = "";
-	document.getElementById('contact_name').value = "";
+	document.getElementById('mce-EMAIL').value = "";
+	document.getElementById('mce-FNAME').value = "";
 	document.getElementById('contact_message').value = "";
 }
 
@@ -112,6 +112,26 @@ let toggleIconDescription = (task) =>{
 	 	$("#"+task).slideToggle();
 	});
 }
+
+let subscribeMailchimp = ($form) => {
+  $.ajax({
+    type: "GET",
+    url: $form.attr('action'),
+    data: $form.serialize(),
+    cache       : false,
+    dataType    : 'jsonp',
+    contentType: "application/json; charset=utf-8",
+    error       : (err)  => { 
+    	return 3; 
+    },success   : (data) => {
+      if(data.result != 'success') {
+        return 2;
+      }else{
+        return 1;
+      }
+    }
+  });
+}
 /***********
 	
 	UI/UX 
@@ -131,42 +151,53 @@ $(document).ready( () => {
     });
 	});
 
-	$("#delani_contact_form").submit((event) => {
-     event.preventDefault();
-     var c_name=$('#contact_name').val();
-     var c_email=$('#contact_email').val();
-     var c_message=$('#contact_message').val();
-     clearContactFormErrors("all");
-     clearNotificationPanel();
-     switch(validateContactForm(c_name,c_email,c_message)){
-     		case 1000:
-     		alert='alert-success';
+
+$("#mc-embedded-subscribe-form").submit((event) => {
+   event.preventDefault();
+   var c_name=$('#mce-FNAME').val();
+   var c_email=$('#mce-EMAIL').val();
+   var c_message=$('#contact_message').val();
+   clearContactFormErrors("all");
+   clearNotificationPanel();
+   switch(validateContactForm(c_name,c_email,c_message)){
+   		case 1000:
+   		var mailchimpSubscriptionForm = $(this);
+   		var submitStatus = subscribeMailchimp(mailchimpSubscriptionForm);
+      if(submitStatus == 1){
+	   		alertType='alert-success';
 				message="<p>"+capitalizeEachWord(c_name)+" we have received your message. Thank you for reaching out to us.</p>";
-				clearContactMessageForm();
-     		break;
+      }else if(submitStatus == 2){
+   			alertType='alert-danger';
+      	message='<p>An error occured while trying to send your message</p>';
+      }else{
+   			alertType='alert-danger';
+   		  message ='<p>An error occurred while trying to reach the MailChimp API. Please try again later.</p>';
+      }
+      clearContactMessageForm();
+   		break;
 
-     		case 1001:
-     		alert='alert-danger';
-     		$('#contact_email_error').show();
-     		message='<p>Kindly provide your valid email address</p>';
-				document.getElementById("contact_email_error").innerHTML="Kindly provide a valid email address.";
-     		break;
+   		case 1001:
+   		alertType='alert-danger';
+   		$('#contact_email_error').show();
+   		message='<p>Kindly provide your valid email address</p>';
+			document.getElementById("contact_email_error").innerHTML="Kindly provide a valid email address.";
+   		break;
 
-     		case 1002:
-     		alert='alert-danger';
-     		$('#contact_name_error').show();
-     		message='<p>Kindly provide your name</p>';
-				document.getElementById("contact_name_error").innerHTML="Kindly provide your name";
-     		break;
+   		case 1002:
+   		alertType='alert-danger';
+   		$('#contact_name_error').show();
+   		message='<p>Kindly provide your name</p>';
+			document.getElementById("contact_name_error").innerHTML="Kindly provide your name";
+   		break;
 
-     		case 1003:
-     		alert='alert-danger';
-     		$('#contact_message_error').show();
-     		message='<p>Kindly provide the contact message</p>';
-				document.getElementById("contact_message_error").innerHTML="Kindly provide contact message.";
-     		break;
-     }
-		 displayNotification(notificationPanel,alert,message);
-  });
+   		case 1003:
+   		alertType='alert-danger';
+   		$('#contact_message_error').show();
+   		message='<p>Kindly provide the contact message</p>';
+			document.getElementById("contact_message_error").innerHTML="Kindly provide contact message.";
+   		break;
+   }
+	 displayNotification(notificationPanel,alertType,message);
+});
 
 });
