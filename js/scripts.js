@@ -7,7 +7,7 @@ const iconsDescriptionWrapper="delani-what-we-do";
 const notificationPanel = "delani-contact-notification";
 
 const portfolios= ['work1','work2','work3','work4','work5','work6','work7','work8'];
-const alphaNumericPattern = /[^a-z\d]/i;
+const alphaNumericPattern = /^[a-z0-9]+$/i;
 const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const iconDescriptions =[
