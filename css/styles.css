@@ -239,7 +239,11 @@ textarea:focus,input:focus,label:focus{
   width: 200px;
   height: 200px;
   top: 0.005em;
-  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)" !important;
+  filter: alpha(opacity=65) !important;
+  -moz-opacity: 0.65 !important;
+  -khtml-opacity: 0.65 !important;
+  opacity: 0.65 !important;
   display:none;
   font-weight: bold;
   position: absolute;

@@ -113,23 +113,11 @@ let toggleIconDescription = (task) =>{
 	});
 }
 
-let subscribeMailchimp = ($form) => {
-  $.ajax({
-    type: "GET",
-    url: $form.attr('action'),
-    data: $form.serialize(),
-    cache       : false,
-    dataType    : 'jsonp',
-    contentType: "application/json; charset=utf-8",
-    error       : (err)  => { 
-    	return 3; 
-    },success   : (data) => {
-      if(data.result != 'success') {
-        return 2;
-      }else{
-        return 1;
-      }
-    }
+let projectHoverEffect = (project) => {
+  $('.'+project).on('mouseover', ()=> {
+      $( "."+project+"-project").show();
+  }).on('mouseout',()=>{
+      $( "."+project+"-project").hide();
   });
 }
 /***********
@@ -144,15 +132,11 @@ $(document).ready( () => {
 	});
 
 	portfolios.forEach((portfolio) =>{
-		$("."+portfolio).hover(() => {
-			 $( "."+portfolio+"-project").show();
-    },() => {
-	    	$( "."+portfolio+"-project").hide();
-    });
+		projectHoverEffect(portfolio);
 	});
 
 
-$("#mc-embedded-subscribe-form").submit((event) => {
+$("#mc-embedded-subscribe").click((event) => {
    event.preventDefault();
    var c_name=$('#mce-FNAME').val();
    var c_email=$('#mce-EMAIL').val();
@@ -161,18 +145,9 @@ $("#mc-embedded-subscribe-form").submit((event) => {
    clearNotificationPanel();
    switch(validateContactForm(c_name,c_email,c_message)){
    		case 1000:
-   		var mailchimpSubscriptionForm = $(this);
-   		var submitStatus = subscribeMailchimp(mailchimpSubscriptionForm);
-      if(submitStatus == 1){
-	   		alertType='alert-success';
-				message="<p>"+capitalizeEachWord(c_name)+" we have received your message. Thank you for reaching out to us.</p>";
-      }else if(submitStatus == 2){
-   			alertType='alert-danger';
-      	message='<p>An error occured while trying to send your message</p>';
-      }else{
-   			alertType='alert-danger';
-   		  message ='<p>An error occurred while trying to reach the MailChimp API. Please try again later.</p>';
-      }
+   		$("#mc-embedded-subscribe-form").submit();
+   		alertType='alert-success';
+			message="<p>"+capitalizeEachWord(c_name)+" we have received your message. Thank you for reaching out to us.</p>";
       clearContactMessageForm();
    		break;
 
