@@ -1,5 +1,7 @@
 # Delani Studio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6e57f65e-9d24-44ef-968b-a3afd3a98aec/deploy-status)](https://app.netlify.com/sites/heuristic-jackson-8098aa/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e57f65e-9d24-44ef-968b-a3afd3a98aec/deploy-status)](https://heuristic-jackson-8098aa.netlify.app/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/kelvinMakamu/delaniStudio)
+[![License: MIT](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/kelvinMakamu/delaniStudio/blob/master/LICENSE)
 ## Brief Description<br>
 The application provides look and feel of a fictional studio site. The page outlines all the information about the studio<br><br>
 It provides details about the services provided by the fictional studio. There is a showcase of the projects already worked on by the studio.<br><br>
