@@ -233,9 +233,9 @@ textarea:focus,input:focus,label:focus{
 	font-weight: bold;
 }
 
-.work1-project,.work2-project,.work3-project,.work4-project,
-.work5-project,.work6-project,.work7-project,.work8-project {
-  z-index: 5;
+#work1-project,#work2-project,#work3-project,#work4-project,
+#work5-project,#work6-project,#work7-project,#work8-project {
+  z-index: 1001;
   width: 200px;
   height: 200px;
   top: 0.005em;

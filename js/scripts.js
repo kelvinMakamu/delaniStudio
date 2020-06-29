@@ -114,10 +114,10 @@ let toggleIconDescription = (task) =>{
 }
 
 let projectHoverEffect = (project) => {
-  $('.'+project).on('mouseover', ()=> {
-      $( "."+project+"-project").show();
+  $('#'+project).on('mouseover', ()=> {
+      $( "#"+project+"-project").show();
   }).on('mouseout',()=>{
-      $( "."+project+"-project").hide();
+      $( "#"+project+"-project").hide();
   });
 }
 /***********
