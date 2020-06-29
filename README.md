@@ -1,5 +1,5 @@
 # Delani Studio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6e57f65e-9d24-44ef-968b-a3afd3a98aec/deploy-status)](https://heuristic-jackson-8098aa.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e57f65e-9d24-44ef-968b-a3afd3a98aec/deploy-status)](https://kmakamu-delanistudio.netlify.app/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/kelvinMakamu/delaniStudio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/kelvinMakamu/delaniStudio/blob/master/LICENSE)
 ## Brief Description<br>
@@ -37,7 +37,7 @@ It checks if email is not valid       | !kmakmgmail.com | Kindly provide a valid
 * jQuery
 * Bootstrap
 ## Live Website<br>
-* [Delani Studio](https://kelvinMakamu.github.io/delaniStudio/)
+* [Delani Studio](https://kmakamu-delanistudio.netlify.app/)
 ## Contact Information<br>
 * [Kelvin Makamu](mailto:profmakamu@gmail.com?subject=[GitHub]%20Private%20and%20Confidential)
 ## License And Copyright Information<br>
