@@ -161,8 +161,8 @@ $("#mc-embedded-subscribe").click((event) => {
    		case 1002:
    		alertType='alert-danger';
    		$('#contact_name_error').show();
-   		message='<p>Kindly provide your name</p>';
-			document.getElementById("contact_name_error").innerHTML="Kindly provide your name";
+   		message='<p>Kindly provide your first name and last name</p>';
+			document.getElementById("contact_name_error").innerHTML="Kindly provide your first name and last name";
    		break;
 
    		case 1003:
